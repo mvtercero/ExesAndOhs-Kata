@@ -12,4 +12,9 @@ describe('Exes and Ohs', () => {
     const result = exesAndOhs('xo')
     expect(result).toEqual(true)
   })
+
+  it('checks if the string has 1o and 1x', () => {
+    const result = exesAndOhs('xoo')
+    expect(result).toEqual(false)
+  })
 })

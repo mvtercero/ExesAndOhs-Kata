@@ -1,20 +1,16 @@
 
 
 function exesAndOhs(text) {
-  let numberOfX = 0;
-  let numberOfO = 0;
 
   const arrayText = Array.from(text)
 
-  arrayText.forEach(element => {
-    if (element === 'x') {
-      numberOfX++
-    } else if (element === 'o') {
-      numberOfO++
-    }
-  })
+  let numberOfX = arrayText
+    .filter(element => element === 'x')
 
-  return numberOfX === numberOfO
+  let numberOfO = arrayText
+    .filter(element => element === 'o')
+
+  return numberOfX.length === numberOfO.length
 
 }
 
